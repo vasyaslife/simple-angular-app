@@ -1,3 +1,7 @@
-<input type="text" placeholder="Поиск" name="search" (input)="searchCards(searchText)"  [(ngModel)]="searchText">
+<div class="search__content">
+    <input type="text" placeholder="Поиск" name="search" (input)="searchCards(searchText)"  [(ngModel)]="searchText">
 
-<app-dashboard [searchText]="searchText"></app-dashboard>
+    <app-dashboard [searchText]="searchText"></app-dashboard>
+</div>
+
+

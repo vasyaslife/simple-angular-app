@@ -1,18 +1,27 @@
 <div class="main-page">
     <header>
-        <div class="header__text">
-            Учебный проект Нистратова.В.А
-        </div>
-        <h1 class="header__login-name">
-            Добро пожаловать {{ login }}
-        </h1>
-        <div (click)="logOut()" class="header__exit">
-            Выход
+        <div class="container">
+            <div class="header__content">
+                <div class="header__text">
+                    Учебный проект Нистратова.В.А
+                </div>
+
+                <div class="login__info">
+                    <h1 class="header__login-name">
+                        {{ login }}
+                    </h1>
+                    <div (click)="logOut()" class="header__exit">
+                        Выход
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
     
     <section class="dashboard">
-        <app-search></app-search>
+        <div class="container">
+            <app-search></app-search>
+        </div>
     </section>
 
 </div>

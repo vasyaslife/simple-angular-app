@@ -1,18 +1,11 @@
 <ul class="card-list">
-    <li *ngFor="let card of data">
-        <div>Число:</div>
-        <p>
-            {{ card.day }}
-        </p>
+    <li *ngFor="let card of data" class="card-list__item">
 
-        <div>День недели:</div>
-        <p>
-            {{ card.weekday }}
-        </p>
+        <p class="card-list__text"><span class="item__title">Число: </span> {{ card.day }}</p>
 
-        <div>Месяц:</div>
-        <p>
-            {{ card.month }}
-        </p>
+        <p class="card-list__text"><span class="item__title">День недели: </span> {{ card.weekday }}</p>
+
+        <p class="card-list__text"><span class="item__title"> Месяц: </span>{{ card.month }}</p>
+
     </li>
 </ul>

@@ -1,0 +1,29 @@
+@import '../../variables.scss';
+
+.search__content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 60px;
+}
+
+input {
+    border-radius: 45px;
+    border: 1px solid $lightGray;
+    padding: 20px 40px;
+    color: $text;
+    width: 470px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+app-dashboard {
+    width: 100%;
+}
+
+@media (max-width: 576px) {
+    input {
+        width: 100%;
+    }
+}

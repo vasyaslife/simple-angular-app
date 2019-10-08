@@ -1,0 +1,33 @@
+@import '../../variables.scss';
+
+.main-page {
+    background-color: $mainBg;
+    min-height: 100vh;
+}
+
+header {
+    padding: 34px 0;
+    background-color: $blue;
+}
+
+.header__content {
+    display: flex;
+    justify-content: space-between;
+    color: $whiteText;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.login__info {
+    display: flex;
+
+}
+
+.header__login-name {
+    font-size: 17px;
+}
+
+.header__exit {
+    margin-left: 15px;
+    cursor: pointer;
+}
