@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  public login = sessionStorage.getItem('login') || '';
-  public pass = sessionStorage.getItem('password') || '';
-  public passVisible = false;
+  login = sessionStorage.getItem('login') || '';
+  pass = sessionStorage.getItem('password') || '';
+  passVisible = false;
 
   logIn() {
     if (this.checkValidation(this.login, this.pass)) {
@@ -51,6 +51,9 @@ export class LoginComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    if (this.checkValidation(this.login, this.pass)) {
+      this.routeToMain();
+    }
   }
 
 }

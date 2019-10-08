@@ -6,6 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
+  searchText = '';
+
+  searchCards(searchText) {
+    let cards = document.querySelectorAll('.card-list > li');
+    
+    cards.forEach((item) => {
+      (item as HTMLElement).style.display = "block";
+      let itemInfo = item.querySelectorAll('p');
+
+      if (itemInfo[0].textContent.toLowerCase().indexOf(searchText.toLowerCase()) === -1 &&
+      itemInfo[1].textContent.toLowerCase().indexOf(searchText.toLowerCase()) === -1 &&
+      itemInfo[2].textContent.toLowerCase().indexOf(searchText.toLowerCase()) === -1) {
+        (item as HTMLElement).style.display = "none";
+      }
+    });
+  }
 
   constructor() { }
 

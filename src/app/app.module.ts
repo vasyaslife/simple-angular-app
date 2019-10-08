@@ -8,7 +8,6 @@ import { SearchComponent } from './search/search.component';
 import { MainComponent } from './main/main.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { DashItemComponent } from './dash-item/dash-item.component';
 import { AuthGuard } from './auth.guard';
 
 @NgModule({
@@ -17,14 +16,18 @@ import { AuthGuard } from './auth.guard';
     SearchComponent,
     MainComponent,
     LoginComponent,
-    DashboardComponent,
-    DashItemComponent
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: LoginComponent },
+      { 
+        path: 'main',
+        component: MainComponent,
+        canActivate: [AuthGuard]
+      },
     ])
   ],
   providers: [],

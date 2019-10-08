@@ -6,6 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
+  login = sessionStorage.getItem('login') || '';
+
+  logOut() {
+    sessionStorage.removeItem('login');
+    sessionStorage.removeItem('password');
+    window.location.href = '/';
+  }
 
   constructor() { }
 

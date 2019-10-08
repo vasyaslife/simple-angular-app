@@ -1,1 +1,18 @@
-<p>main works!</p>
+<div class="main-page">
+    <header>
+        <div class="header__text">
+            Учебный проект Нистратова.В.А
+        </div>
+        <h1 class="header__login-name">
+            Добро пожаловать {{ login }}
+        </h1>
+        <div (click)="logOut()" class="header__exit">
+            Выход
+        </div>
+    </header>
+    
+    <section class="dashboard">
+        <app-search></app-search>
+    </section>
+
+</div>

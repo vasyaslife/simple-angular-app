@@ -1,1 +1,3 @@
-<p>search works!</p>
+<input type="text" placeholder="Поиск" name="search" (input)="searchCards(searchText)"  [(ngModel)]="searchText">
+
+<app-dashboard [searchText]="searchText"></app-dashboard>

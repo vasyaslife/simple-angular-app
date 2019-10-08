@@ -1,1 +1,18 @@
-<p>dashboard works!</p>
+<ul class="card-list">
+    <li *ngFor="let card of data">
+        <div>Число:</div>
+        <p>
+            {{ card.day }}
+        </p>
+
+        <div>День недели:</div>
+        <p>
+            {{ card.weekday }}
+        </p>
+
+        <div>Месяц:</div>
+        <p>
+            {{ card.month }}
+        </p>
+    </li>
+</ul>
