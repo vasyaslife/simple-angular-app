@@ -28,7 +28,9 @@ import { AuthGuard } from './auth.guard';
         component: MainComponent,
         canActivate: [AuthGuard]
       },
-    ])
+    ],
+    { useHash: true }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
