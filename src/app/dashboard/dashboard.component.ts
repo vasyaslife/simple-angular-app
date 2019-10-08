@@ -32,6 +32,7 @@ export class DashboardComponent implements OnInit {
       'Июль',
       'Август',
       'Сентябрь',
+      'Октябрь',
       'Ноябрь',
       'Декабрь'
     ];
