@@ -1,0 +1,89 @@
+@import '../../variables.scss';
+
+.login-page {
+    background-color: $loginBg;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    padding: 117px 102px;
+    background-color: #fff;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.form__text {
+    font-size: 24px;
+    color: $text;
+}
+
+input {
+    color: $text;
+}
+
+.form__input {
+    width: 365px;
+    margin-top: 60px;
+    padding: 24px 30px;
+    border-radius: 2px;
+    border: 1px solid $lightGray;
+}
+
+.form__input_pass {
+    margin-top: 35px;
+}
+
+.form__checkbox {
+    margin-top: 20px;
+
+    label {
+        color: $text;
+    }
+}
+
+button {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px 40px;
+    width: 100%;
+    background: $blue;
+    color: $whiteText;
+    border: 1px solid $blue;
+    border-radius: 2px;
+    cursor: pointer;
+
+        &:hover {
+            color: $text;
+            background-color: #fff;
+        }
+}
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+    .form {
+        padding: 70px;
+    }
+}
+
+@media (max-width: 576px) {
+    .form {
+        padding: 50px 15px;
+        width: 90%;
+    }
+
+    .form__input {
+        width: 100%;
+    }
+}

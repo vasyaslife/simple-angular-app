@@ -1,1 +1,49 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+div, p, input, button, form {
+	box-sizing: border-box;
+}
+
+button, h1, h2, h3, p, ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+ul, li {
+	display: block;
+}
+
+a, a:hover, a:active, a:focus,
+button, input, button:hover, button:active, button:focus,
+input:focus, input:active {
+	text-decoration: none;
+	outline: none;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}

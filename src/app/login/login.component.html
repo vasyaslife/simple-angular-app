@@ -1,14 +1,16 @@
-<form action="#" class="form">
-    <p class="form__text">Войдите в систему</p>
-    <input type="text" required placeholder="Логин" name="login"  [(ngModel)]="login">
-
-    <input *ngIf="passVisible" type="text" required placeholder="Пароль" name="password"  [(ngModel)]="pass">
-    <input *ngIf="!passVisible" type="password" required placeholder="Пароль" name="password"  [(ngModel)]="pass">
-
-    <div class="form__checkbox">
-        <input type="checkbox" name="password-visible" [checked]="passVisible" [(ngModel)]="passVisible">
-        <label for="passVisible">Показать пароль</label>
-    </div>
-
-    <button type="submit" (click)="logIn()">Вход</button>
-</form>
+<div class="login-page">
+    <form action="#" class="form">
+        <p class="form__text">Войдите в систему</p>
+        <input type="text" required placeholder="Логин" name="login"  [(ngModel)]="login" class="form__input">
+    
+        <input *ngIf="passVisible" type="text" required placeholder="Пароль" name="password"  [(ngModel)]="pass" class="form__input form__input_pass">
+        <input *ngIf="!passVisible" type="password" required placeholder="Пароль" name="password"  [(ngModel)]="pass" class="form__input form__input_pass">
+    
+        <div class="form__checkbox">
+            <input type="checkbox" name="password-visible" [checked]="passVisible" [(ngModel)]="passVisible">
+            <label for="passVisible">Показать пароль</label>
+        </div>
+    
+        <button type="submit" (click)="logIn()">Вход</button>
+    </form>
+</div>
