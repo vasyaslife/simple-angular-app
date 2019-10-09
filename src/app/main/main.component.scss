@@ -6,28 +6,35 @@
 }
 
 header {
-    padding: 34px 0;
+    padding: 14px 0 34px;
     background-color: $blue;
 }
 
 .header__content {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     color: $whiteText;
     font-size: 17px;
     font-weight: normal;
+
+    .header__text {
+        margin-top: 20px;
+    }
 }
 
 .login__info {
     display: flex;
-
+    flex-wrap: wrap;
 }
 
 .header__login-name {
+    margin-top: 20px;
     font-size: 17px;
+    margin-right: 15px;
 }
 
 .header__exit {
-    margin-left: 15px;
+    margin-top: 20px;
     cursor: pointer;
 }
