@@ -1,10 +1,18 @@
 <div class="login-page">
     <form action="#" class="form">
-        <p class="form__text">Войдите в систему</p>
-        <input type="text" required placeholder="Логин" name="login"  [(ngModel)]="login" class="form__input">
+        <p class="form__text">
+            Войдите в систему
+        </p>
+        <input type="text" [class.form__error-input]="loginError" required placeholder="Логин" name="login" (input)="deleteErrorText()"  [(ngModel)]="login" class="form__input">
+        <p class="form__error-text" *ngIf="loginError">
+            Введите логин длиннее трех символов
+        </p>
     
-        <input *ngIf="passVisible" type="text" required placeholder="Пароль" name="password"  [(ngModel)]="pass" class="form__input form__input_pass">
-        <input *ngIf="!passVisible" type="password" required placeholder="Пароль" name="password"  [(ngModel)]="pass" class="form__input form__input_pass">
+        <input *ngIf="passVisible" [class.form__error-input]="passError" type="text" required placeholder="Пароль" name="password" (input)="deleteErrorText()"  [(ngModel)]="pass" class="form__input form__input_pass">
+        <input *ngIf="!passVisible" [class.form__error-input]="passError" type="password" required placeholder="Пароль" name="password" (input)="deleteErrorText()"  [(ngModel)]="pass" class="form__input form__input_pass">
+        <p class="form__error-text" *ngIf="passError">
+            Пароль не должен быть короче 10 символов, содержать кириллицу, начинаться с цифры и должен иметь хотя бы одну заглавную букву
+        </p>
     
         <div class="form__checkbox">
             <input type="checkbox" name="password-visible" [checked]="passVisible" [(ngModel)]="passVisible">

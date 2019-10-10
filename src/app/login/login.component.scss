@@ -34,6 +34,17 @@ input {
     border: 1px solid $lightGray;
 }
 
+.form__error-input {
+    border: 1px solid #ff3737;
+}
+
+.form__error-text {
+    color: #ff3737;
+    margin-top: 10px;
+    width: 365px;
+    text-align: center;
+}
+
 .form__input_pass {
     margin-top: 35px;
 }
@@ -84,6 +95,10 @@ button {
     }
 
     .form__input {
+        width: 100%;
+    }
+
+    .form__error-text {
         width: 100%;
     }
 }
