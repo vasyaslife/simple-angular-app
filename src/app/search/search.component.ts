@@ -13,7 +13,7 @@ export class SearchComponent implements OnInit {
     
     cards.forEach((item) => {
       (item as HTMLElement).style.display = "block";
-      let itemInfo = item.querySelectorAll('p');
+      let itemInfo = item.querySelectorAll('.card-list__item-info');
 
       if (itemInfo[0].textContent.toLowerCase().indexOf(searchText.toLowerCase()) === -1 &&
       itemInfo[1].textContent.toLowerCase().indexOf(searchText.toLowerCase()) === -1 &&

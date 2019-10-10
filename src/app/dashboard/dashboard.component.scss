@@ -14,15 +14,12 @@
     padding: 37px 25px;
 }
 
-.card-list__text {
+.card-list__item-text {
     margin-top: 20px; 
     color: $lightText;
+    font-weight: normal;
 
     &:first-child {
         margin-top: 0;
     }
-}
-
-.item__title {
-    font-weight: bold;
 }
